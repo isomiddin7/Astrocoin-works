@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnreg5submit"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="256dp"
+        android:background="@drawable/backgraundbutton"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.821" />
+
+    <ImageView
+        android:id="@+id/imgreg5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_basccc" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="I am a"
+        android:textSize="50sp"
+        app:layout_constraintStart_toEndOf="@+id/imgreg5"
+        app:layout_constraintTop_toBottomOf="@+id/imgreg5" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="336dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backendpage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <View
+        android:id="@+id/wievfemale1"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:background="@drawable/backkfemale"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/wievmale1"
+        app:layout_constraintStart_toStartOf="@+id/wievmale1"
+        app:layout_constraintTop_toBottomOf="@+id/wievmale1" />
+
+    <View
+        android:id="@+id/wievmale2"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:background="@drawable/backkfemale"
+        app:layout_constraintBottom_toBottomOf="@+id/wievmale1"
+        app:layout_constraintEnd_toEndOf="@+id/wievfemale1"
+        app:layout_constraintStart_toStartOf="@+id/wievfemale1"
+        app:layout_constraintTop_toTopOf="@+id/wievmale1" />
+
+    <View
+        android:id="@+id/wievmale1"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/backmale"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <View
+        android:id="@+id/wievfemale2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/backmale"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/wievfemale1"
+        app:layout_constraintStart_toStartOf="@+id/wievmale1"
+        app:layout_constraintTop_toTopOf="@+id/wievfemale1" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Man"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wievmale1"
+        app:layout_constraintStart_toStartOf="@+id/wievmale1"
+        app:layout_constraintTop_toTopOf="@+id/wievmale1" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Woman"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/wievfemale1"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/wievfemale1" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnreg5submit" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
