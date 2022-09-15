@@ -27,7 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Objects;
 import java.util.concurrent.Executor;
 
-public class Password extends AppCompatActivity  {
+public class Password extends AppCompatActivity {
     DocumentReference documentReference;
     FirebaseFirestore db;
     private FirebaseAuth auth;
@@ -37,9 +37,9 @@ public class Password extends AppCompatActivity  {
     private Executor executor;
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
-    private TextView txt1,txt2,txt3,txt4,txt5,txt6,txt7,txt8,txt9,txt0;
-    private View pas1,pas2,pas3,pas4,pas5,pas6;
-    ImageView imgpasback,imgfingerptint;
+    private TextView txt1, txt2, txt3, txt4, txt5, txt6, txt7, txt8, txt9, txt0;
+    private View pas1, pas2, pas3, pas4, pas5, pas6;
+    ImageView imgpasback, imgfingerptint;
     private EditText edipasswordall;
     String password = "0", textparol, a;
     String UID, TIL, REJIM, KALIT, PAROL;
@@ -85,6 +85,7 @@ public class Password extends AppCompatActivity  {
                 super.onAuthenticationError(errorCode, errString);
                 //imgparfinger.setVisibility(View.INVISIBLE);
             }
+
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
@@ -98,6 +99,7 @@ public class Password extends AppCompatActivity  {
                 startActivity(intent);
                 finish();
             }
+
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
@@ -133,26 +135,27 @@ public class Password extends AppCompatActivity  {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 textparol = edipasswordall.getText().toString().trim();
-                if (soni == 1){
+                if (soni == 1) {
                     pas1.setBackgroundResource(R.drawable.shadov1);
                 }
-                if (soni == 2){
+                if (soni == 2) {
                     pas2.setBackgroundResource(R.drawable.shadov1);
                 }
-                if (soni == 3){
+                if (soni == 3) {
                     pas3.setBackgroundResource(R.drawable.shadov1);
                 }
-                if (soni == 4){
+                if (soni == 4) {
                     pas4.setBackgroundResource(R.drawable.shadov1);
                 }
-                if (soni == 5){
+                if (soni == 5) {
                     pas5.setBackgroundResource(R.drawable.shadov1);
                 }
-                if (soni == 6){
+                if (soni == 6) {
                     pas6.setBackgroundResource(R.drawable.shadov1);
                 }
                 int i = textparol.length();
@@ -193,6 +196,7 @@ public class Password extends AppCompatActivity  {
                     }
                 }
             }
+
             @Override
             public void afterTextChanged(Editable s) {
             }
@@ -206,6 +210,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._0));
             }
         });
+
         txt1.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -215,6 +220,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._1));
             }
         });
+
         txt2.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -233,6 +239,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._3));
             }
         });
+
         txt4.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -251,6 +258,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._5));
             }
         });
+
         txt6.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -260,6 +268,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._6));
             }
         });
+
         txt7.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -269,6 +278,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._7));
             }
         });
+
         txt8.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -278,6 +288,7 @@ public class Password extends AppCompatActivity  {
                 edipasswordall.setText(a + getString(R.string._8));
             }
         });
+
         txt9.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -288,6 +299,7 @@ public class Password extends AppCompatActivity  {
             }
         });
     }
+
     private void readdatasql() {
         Cursor res = MyDb.oqish();
         StringBuilder stringBuffer = new StringBuilder();
@@ -296,6 +308,7 @@ public class Password extends AppCompatActivity  {
         StringBuilder stringBuffer3 = new StringBuilder();
         StringBuilder stringBuffer4 = new StringBuilder();
         if (res != null && res.getCount() > 0) {
+
             while (res.moveToNext()) {
                 stringBuffer.append(res.getString(1));
                 stringBuffer1.append(res.getString(2));
@@ -303,6 +316,7 @@ public class Password extends AppCompatActivity  {
                 stringBuffer3.append(res.getString(4));
                 stringBuffer4.append(res.getString(5));
             }
+
             UID = stringBuffer.toString();
             TIL = stringBuffer1.toString();
             REJIM = stringBuffer2.toString();
