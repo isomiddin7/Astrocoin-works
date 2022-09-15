@@ -28,6 +28,7 @@ public class Reg2 extends AppCompatActivity {
                 finish();
             }
         });
+        android.widget.Toast.makeText(this, "ajoyib", Toast.LENGTH_SHORT).show();
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b != null) {

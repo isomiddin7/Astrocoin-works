@@ -28,6 +28,7 @@ public class Reg1 extends AppCompatActivity {
                 finish();
             }
         });
+
         Intent iin = getIntent();
         Bundle b = iin.getExtras();
         if (b != null) {
